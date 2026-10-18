@@ -28,6 +28,7 @@
       privacyB3: "If you create an account we keep your email, a password hash (handled by Supabase), your alias, optional Bitcoin and Lightning payout addresses, your cloud high score, a saved run tape, awards, and your versus rating. Feedback you send while signed in is stored with your account.",
       privacyB4: "We use that to sign you in, show a public leaderboard of alias and score, pay prize winners, and read feedback. We do not sell lists. Donations go to our Lightning invoice or Bitcoin address. The payment itself does not tell us who you are.",
       privacyB5: "You can sign out anytime. To delete an account, email hello@bitcoinizate.com from the address you registered with. We delete the account and the profile tied to it.",
+      privacyB7: "rayo borgesdebioyizador stores each page it writes (the names and options you type plus the generated text) so its link can be shared. Those pages are public, so do not type personal data. To limit use we keep a salted hash of your IP address with a counter for a short time, never the address itself.",
       privacyB6: "Questions: <a href=\"mailto:hello@bitcoinizate.com\">hello@bitcoinizate.com</a>"
     },
     es: {
@@ -55,6 +56,7 @@
       privacyB3: "Si creas una cuenta guardamos tu correo, un hash de contraseña (lo maneja Supabase), tu alias, direcciones opcionales de Bitcoin y Lightning para cobros, tu puntaje en la nube, una cinta de partida guardada, premios y tu rating de versus. El feedback que envías con la sesión iniciada se guarda con tu cuenta.",
       privacyB4: "Eso sirve para iniciar sesión, mostrar un ranking público de alias y puntaje, pagar premios y leer el feedback. No vendemos listas. Las donaciones van a nuestra factura Lightning o dirección Bitcoin. El pago en sí no nos dice quién eres.",
       privacyB5: "Puedes cerrar sesión cuando quieras. Para borrar una cuenta escribe a hello@bitcoinizate.com desde el correo con el que te registraste. Borramos la cuenta y el perfil asociado.",
+      privacyB7: "rayo borgesdebioyizador guarda cada página que escribe (los nombres y opciones que escribes y el texto generado) para que su link se pueda compartir. Esas páginas son públicas: no escribas datos personales. Para limitar el uso guardamos por poco tiempo un hash con sal de tu dirección IP y un contador, nunca la dirección en sí.",
       privacyB6: "Consultas: <a href=\"mailto:hello@bitcoinizate.com\">hello@bitcoinizate.com</a>"
     }
   };

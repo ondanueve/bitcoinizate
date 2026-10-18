@@ -41,8 +41,10 @@ window.BZ_PROJECTS = [
   },
   {
     id: "borgesdebioyizador",
-    name: "borgesdebioyizador",
-    status: "soon",
+    name: "rayo borgesdebioyizador",
+    status: "live",
+    url: "/borgesdebioyizador/",
+    repo: "https://github.com/ondanueve/borgesdebioyizador",
     kind: { en: "Literary generator", es: "Generador literario" },
     desc: {
       en: "Apocryphal diary entries in the manner of Bioy's Borges, starring real public figures with a documented friendship. Parody and fiction.",
