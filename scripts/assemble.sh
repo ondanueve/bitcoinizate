@@ -14,7 +14,7 @@ mkdir -p "$OUT/choppy-bitcoin"
 # Hub: everything except repo plumbing.
 tar -C "$HUB" -cf - \
   --exclude=./.git --exclude=./.github --exclude=./scripts --exclude=./_site --exclude=./_choppy \
-  --exclude=./README.md --exclude=./LICENSE --exclude=./.gitignore --exclude=./.nojekyll . \
+  --exclude=./README.md --exclude=./LICENSE --exclude=./.gitignore --exclude=./.nojekyll --exclude=./art-archive . \
   | tar -C "$OUT" -xf -
 
 # Choppy Bitcoin: everything except repo plumbing, SQL and notes.
