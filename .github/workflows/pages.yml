@@ -1,0 +1,83 @@
+# Publishes bitcoinizate.com: this repo (the hub) at /, plus the public
+# ondanueve/choppy-bitcoin repo under /choppy-bitcoin/.
+# Runs on push to main, by hand (Actions tab or `gh workflow run pages.yml`),
+# and every 3 hours. The scheduled run only redeploys when either repo has a
+# new commit since the live build (compared with https://bitcoinizate.com/build.json).
+# No secrets or PATs needed: choppy-bitcoin is public.
+name: pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    - cron: "23 */3 * * *"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      skip: ${{ steps.check.outputs.skip }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Check out choppy-bitcoin
+        uses: actions/checkout@v7
+        with:
+          repository: ondanueve/choppy-bitcoin
+          ref: main
+          path: _choppy
+
+      - name: Skip scheduled run if nothing changed
+        id: check
+        run: |
+          hub="$(git rev-parse HEAD)"
+          choppy="$(git -C _choppy rev-parse HEAD)"
+          echo "hub=$hub choppy=$choppy"
+          skip=false
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            live="$(curl -fsS --max-time 20 https://bitcoinizate.com/build.json || true)"
+            echo "live build: $live"
+            if [ -n "$live" ] \
+              && [ "$(echo "$live" | jq -r .hub)" = "$hub" ] \
+              && [ "$(echo "$live" | jq -r .choppy)" = "$choppy" ]; then
+              skip=true
+            fi
+          fi
+          echo "skip=$skip" >> "$GITHUB_OUTPUT"
+
+      - name: Assemble site
+        if: steps.check.outputs.skip != 'true'
+        run: scripts/assemble.sh _choppy _site
+
+      - name: Check local links
+        if: steps.check.outputs.skip != 'true'
+        run: python3 scripts/check-links.py _site
+
+      - uses: actions/configure-pages@v6
+        if: steps.check.outputs.skip != 'true'
+
+      - uses: actions/upload-pages-artifact@v5
+        if: steps.check.outputs.skip != 'true'
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    if: needs.build.outputs.skip != 'true'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5
