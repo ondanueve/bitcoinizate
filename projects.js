@@ -47,8 +47,8 @@ window.BZ_PROJECTS = [
     repo: "https://github.com/ondanueve/borgesdebioyizador",
     kind: { en: "Literary generator", es: "Generador literario" },
     desc: {
-      en: "Apocryphal diary entries in the manner of Bioy's Borges, starring real public figures with a documented friendship. Parody and fiction.",
-      es: "Entradas apócrifas de diario a la manera del Borges de Bioy, protagonizadas por figuras públicas reales con una amistad documentada. Parodia y ficción."
+      en: "Creador de diarios apócrifos.",
+      es: "Creador de diarios apócrifos."
     }
   }
 ];
