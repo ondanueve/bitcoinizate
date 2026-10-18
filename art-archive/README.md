@@ -13,4 +13,5 @@ This folder is excluded from the published site (see `scripts/assemble.sh`).
 Older archive (before the repo split): private repo `ondanueve/bitcoinizate-old`, folder `art-archive/`.
 - `history/`: game art replaced in `ondanueve/choppy-bitcoin`. `unclemike-wide-replaced-2026-10-18.jpg` is the previous
   Uncle Mike card, replaced by a new Uncle Mike design, distinct from Héctor, that fixes the deformed legs.
+- `history/unclemike-square-replaced-2026-10-18.jpg`: the previous square Uncle Mike fallback art, replaced by a square cut of the new design.
 - `illus/gen-fixes2/`: raw redraw PNGs (`unclemike-v3.png` = the new Uncle Mike design).
