@@ -11,3 +11,6 @@ This folder is excluded from the published site (see `scripts/assemble.sh`).
   `_superseded/` holds discarded intermediate versions (e.g. a citadelQuestion v2 made without the clothing directive).
 
 Older archive (before the repo split): private repo `ondanueve/bitcoinizate-old`, folder `art-archive/`.
+- `history/`: game art replaced in `ondanueve/choppy-bitcoin`. `unclemike-wide-replaced-2026-10-18.jpg` is the previous
+  Uncle Mike card, replaced by a new Uncle Mike design, distinct from Héctor, that fixes the deformed legs.
+- `illus/gen-fixes2/`: raw redraw PNGs (`unclemike-v3.png` = the new Uncle Mike design).
