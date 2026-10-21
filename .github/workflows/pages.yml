@@ -42,7 +42,7 @@ jobs:
       - name: Check out borgesdebioyizador
         uses: actions/checkout@v7
         with:
-          repository: ondanueve/borgesdebioyizador
+          repository: ondanueve/RB
           ref: main
           path: _borges
 
