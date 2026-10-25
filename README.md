@@ -12,9 +12,10 @@ The list lives in [`projects.js`](projects.js). To add a project, append one obj
 
 - `/` — this repo (`index.html`, `privacy.html`, `404.html`, `style.css`, `hub.js`, `projects.js`, icons, `robots.txt`, `sitemap.xml`, `CNAME`)
 - `/choppy-bitcoin/` — the public [`ondanueve/choppy-bitcoin`](https://github.com/ondanueve/choppy-bitcoin) repo, checked out at build time
+- `/borgesdebioyizador/` — the static build of the public [`ondanueve/RB`](https://github.com/ondanueve/RB) repo (rayo borgesdebioyizador; `npm ci && npm test && npm run build` -> `out/`). Its generation backend runs on Supabase Edge Functions.
 - `/build.json` — which commit of each repo is live
 
-It runs on every push to `main`, by hand, and every 3 hours (the scheduled run only deploys if either repo changed). To publish a Choppy Bitcoin change right away:
+It runs on every push to `main`, by hand, and every 3 hours (the scheduled run only deploys if any of the three repos changed). To publish a Choppy Bitcoin or RB change right away:
 
 ```sh
 gh workflow run pages.yml -R ondanueve/bitcoinizate
@@ -37,6 +38,10 @@ jobs:
       - run: gh workflow run pages.yml -R ondanueve/bitcoinizate
         env: { GH_TOKEN: "${{ secrets.HUB_DISPATCH_TOKEN }}" }
 ```
+
+## Language and SEO
+
+Spanish (es-AR) is the primary language: static HTML is in Spanish with `lang="es"`, and `hub.js` defaults to Spanish unless the visitor chose English (saved in `localStorage`, shared with Choppy Bitcoin) or the URL has `?lang=en`. Keep `sitemap.xml` `lastmod` dates current when pages change.
 
 ## Old URLs
 
