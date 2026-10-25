@@ -61,17 +61,18 @@
     }
   };
 
+  // Spanish is the site's primary language. English only when the visitor picked it
+  // (saved choice, shared with Choppy Bitcoin) or ?lang=en is in the URL.
   function detect() {
+    try {
+      var q = /[?&]lang=(es|en)\b/.exec(location.search || "");
+      if (q) return q[1];
+    } catch (e) {}
     try {
       var saved = localStorage.getItem(KEY);
       if (saved === "es" || saved === "en") return saved;
     } catch (e) {}
-    var list = (navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || "en"]);
-    for (var i = 0; i < list.length; i++) {
-      var l = String(list[i] || "").toLowerCase();
-      if (l === "es" || l.indexOf("es-") === 0) return "es";
-    }
-    return "en";
+    return "es";
   }
   var lang = detect();
   function t(k) { var p = dict[lang] || dict.en; return p[k] != null ? p[k] : (dict.en[k] != null ? dict.en[k] : k); }

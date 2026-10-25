@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Bitcoinizate · projects</title>
-  <meta name="description" content="Bitcoinizate: a small shelf of projects. Choppy Bitcoin, BonXai Pruner, rayo borgesdebioyizador and more.">
-  <meta name="robots" content="index,follow">
+  <title>Bitcoinizate · Juegos, herramientas y juguetes literarios</title>
+  <meta name="description" content="Bitcoinizate es un pequeño estante de proyectos gratis: Choppy Bitcoin, un arcade de trading en el navegador; BonXai Pruner, filtros con IA para X; y rayo borgesdebioyizador, un creador de diarios apócrifos al estilo de Bioy y Borges.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="https://bitcoinizate.com/">
   <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
@@ -17,41 +17,79 @@
   <meta name="theme-color" content="#0d0d0d">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Bitcoinizate">
-  <meta property="og:title" content="Bitcoinizate">
-  <meta property="og:description" content="A small shelf of projects: games, tools and literary toys.">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:title" content="Bitcoinizate · Juegos, herramientas y juguetes literarios">
+  <meta property="og:description" content="Un pequeño estante de proyectos gratis: Choppy Bitcoin, BonXai Pruner y rayo borgesdebioyizador.">
   <meta property="og:url" content="https://bitcoinizate.com/">
   <meta property="og:image" content="https://bitcoinizate.com/og-icon.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:image:alt" content="Bitcoinizate">
+  <meta name="twitter:title" content="Bitcoinizate · Juegos, herramientas y juguetes literarios">
+  <meta name="twitter:description" content="Un pequeño estante de proyectos gratis: Choppy Bitcoin, BonXai Pruner y rayo borgesdebioyizador.">
   <meta name="twitter:image" content="https://bitcoinizate.com/og-icon.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://bitcoinizate.com/#org",
+        "name": "Bitcoinizate",
+        "url": "https://bitcoinizate.com/",
+        "logo": "https://bitcoinizate.com/favicon-192.png",
+        "email": "hello@bitcoinizate.com",
+        "sameAs": ["https://github.com/ondanueve", "https://discord.gg/HkS8epr8mE"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://bitcoinizate.com/#website",
+        "name": "Bitcoinizate",
+        "url": "https://bitcoinizate.com/",
+        "inLanguage": ["es", "en"],
+        "publisher": { "@id": "https://bitcoinizate.com/#org" }
+      },
+      {
+        "@type": "ItemList",
+        "name": "Proyectos de Bitcoinizate",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "item": { "@type": "VideoGame", "name": "Choppy Bitcoin", "url": "https://bitcoinizate.com/choppy-bitcoin/", "description": "Un arcade de trading en el navegador.", "gamePlatform": "Web browser", "applicationCategory": "Game", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } } },
+          { "@type": "ListItem", "position": 2, "item": { "@type": "SoftwareApplication", "name": "BonXai Pruner", "url": "https://github.com/ondanueve/BonXai-Pruner", "description": "Extensión de Chrome que filtra tu feed de X con Gemini Nano en el dispositivo.", "applicationCategory": "BrowserApplication", "operatingSystem": "Chrome", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } } },
+          { "@type": "ListItem", "position": 3, "item": { "@type": "WebApplication", "name": "rayo borgesdebioyizador", "url": "https://bitcoinizate.com/borgesdebioyizador/", "description": "Creador de diarios apócrifos al estilo de Bioy y Borges.", "applicationCategory": "EntertainmentApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } } }
+        ]
+      }
+    ]
+  }
+  </script>
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
   <div class="wrap">
     <div class="top">
       <a class="brand" href="/"><img src="/favicon-192.png" width="40" height="40" alt=""><span>BITCOINIZATE</span></a>
-      <div class="lang-sw" role="group" aria-label="Language">
+      <div class="lang-sw" role="group" aria-label="Idioma">
         <button type="button" data-lang="en">EN</button>
         <button type="button" data-lang="es">ES</button>
       </div>
     </div>
     <header class="hero">
       <h1>Bitcoinizate</h1>
-      <p class="tagline" data-i18n="tagline">A small shelf of projects</p>
-      <p class="intro" data-i18n="intro">Games, tools and literary toys, made one at a time. Some are finished, some are on the way.</p>
+      <p class="tagline" data-i18n="tagline">Un pequeño estante de proyectos</p>
+      <p class="intro" data-i18n="intro">Juegos, herramientas y juguetes literarios, hechos de a uno. Algunos están terminados, otros vienen en camino.</p>
     </header>
     <main>
-      <h2 data-i18n="projects">Projects</h2>
+      <h2 data-i18n="projects">Proyectos</h2>
       <ol class="projects" id="projects">
-        <li class="project status-live"><span class="num">I</span><div class="body"><h3><a href="/choppy-bitcoin/">Choppy Bitcoin</a></h3><p class="desc">A trading arcade in the browser.</p></div></li>
-        <li class="project status-code"><span class="num">II</span><div class="body"><h3><a href="https://github.com/ondanueve/BonXai-Pruner">BonXai Pruner</a></h3><p class="desc">AI filters for X.</p></div></li>
-        <li class="project status-live"><span class="num">III</span><div class="body"><h3><a href="/borgesdebioyizador/">rayo borgesdebioyizador</a></h3><p class="desc">Creador de diarios apócrifos.</p></div></li>
+        <li class="project status-live"><span class="num">I</span><div class="body"><h3><a href="/choppy-bitcoin/">Choppy Bitcoin</a></h3><p class="desc">Un arcade de trading en el navegador: vuela el ₿ entre velas japonesas. Gratis, el puntaje es dinero de juego.</p></div></li>
+        <li class="project status-code"><span class="num">II</span><div class="body"><h3><a href="https://github.com/ondanueve/BonXai-Pruner">BonXai Pruner</a></h3><p class="desc">Filtros con IA para tu feed de X, con Gemini Nano dentro de Chrome. Gratis y privado.</p></div></li>
+        <li class="project status-live"><span class="num">III</span><div class="body"><h3><a href="/borgesdebioyizador/">rayo borgesdebioyizador</a></h3><p class="desc">Creador de diarios apócrifos al estilo de Bioy y Borges, con figuras públicas reales. Parodia.</p></div></li>
       </ol>
     </main>
     <footer>
       © Bitcoinizate ·
-      <a href="/privacy.html" data-i18n="privacy">Privacy</a> ·
+      <a href="/privacy.html" data-i18n="privacy">Privacidad</a> ·
       <a href="https://discord.gg/HkS8epr8mE" target="_blank" rel="noopener noreferrer">Discord</a> ·
       <a href="mailto:hello@bitcoinizate.com">hello@bitcoinizate.com</a> ·
       <a href="https://github.com/ondanueve" target="_blank" rel="noopener noreferrer">GitHub</a>
