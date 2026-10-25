@@ -75,7 +75,7 @@ jobs:
         if: steps.check.outputs.skip != 'true'
         working-directory: _borges
         run: |
-          npm install --no-audit --no-fund
+          npm ci --no-audit --no-fund
           npm test
           npm run build
 
