@@ -15,3 +15,6 @@ Older archive (before the repo split): private repo `ondanueve/bitcoinizate-old`
   Uncle Mike card, replaced by a new Uncle Mike design, distinct from Héctor, that fixes the deformed legs.
 - `history/unclemike-square-replaced-2026-10-18.jpg`: the previous square Uncle Mike fallback art, replaced by a square cut of the new design.
 - `illus/gen-fixes2/`: raw redraw PNGs (`unclemike-v3.png` = the new Uncle Mike design).
+- `choppy/replaced-mp188/`: the 12 post-decision images (`<id>-<choice>-wide.jpg`) live in Choppy Bitcoin until mp187,
+  replaced in mp188 because Paco was drawn as a beagle instead of his terrier design.
+- `choppy/paco-fix-mp188/raw/`: the AI Studio PNGs (1584x672) for those replacements; `_rejected/` holds discarded tries.
