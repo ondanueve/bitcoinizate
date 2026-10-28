@@ -6,3 +6,7 @@
 ## mp191 (2026-10-27)
 - `replaced-mp191/`: the 6 wide images live before mp191 (anOffer-a, anOffer-b, wedding-b, islandInspection, honeymoon-a, chess fallback), named `<id>-wide.replaced-mp191.jpg`.
 - `fix-mp191/`: AI Studio sources (1584x672 PNG) of the new live art (anOffer-b-try3, others try1; tags `post5` / `cin16`). `_rejected/` has anOffer-b try1 and try2.
+
+## mp192 (2026-10-28)
+- `replaced-mp192/`: the AI Studio chess-pool JPGs (saavedra, kinghunt, goldcoins, century) live from mp189 to mp191, named `chess-<slug>-wide.replaced-mp192.jpg`.
+- `chess-gpt-mp192/`: ChatGPT sources (1942x809 PNG) of their replacements, drawn with chess-opera and chess-evergreen as style references so all 7 match (tag `chs2`).
