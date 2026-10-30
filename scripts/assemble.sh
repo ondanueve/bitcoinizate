@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 # Build the full bitcoinizate.com site into one folder:
 #   hub files at /, the choppy-bitcoin repo under /choppy-bitcoin/,
-#   and the static build of borgesdebioyizador under /borgesdebioyizador/.
-# Usage: scripts/assemble.sh <choppy-bitcoin checkout> <output dir> [borgesdebioyizador checkout]
-#   The borgesdebioyizador checkout must already be built (npm ci && npm run build -> out/).
+#   (rayo borgesdebioyizador ya no se publica acá: vive en https://ondanueve.github.io/RB/).
+# Usage: scripts/assemble.sh <choppy-bitcoin checkout> <output dir> [ignored]
+#   The third argument is only kept so the old workflow still works; it is no longer copied.
 # Used by .github/workflows/pages.yml and for local previews.
 set -euo pipefail
 HUB="$(cd "$(dirname "$0")/.." && pwd)"
 CHOPPY="$(cd "${1:?path to choppy-bitcoin checkout}" && pwd)"
 OUT="${2:?output dir}"
-BORGES="${3:-}"
+BORGES="${3:-}"  # NOT copied: only its commit goes into build.json so the old workflow keeps its skip check
 
 rm -rf "$OUT"
 mkdir -p "$OUT/choppy-bitcoin"
@@ -26,18 +26,7 @@ tar -C "$CHOPPY" -cf - \
   --exclude=./README.md --exclude=./LICENSE --exclude=./.gitignore . \
   | tar -C "$OUT/choppy-bitcoin" -xf -
 
-# rayo borgesdebioyizador: the static export (Next.js output: "export", basePath /borgesdebioyizador).
-# Its backend lives on Supabase Edge Functions; nothing secret is in the build.
-if [ -n "$BORGES" ]; then
-  BORGES="$(cd "$BORGES" && pwd)"
-  if [ ! -f "$BORGES/out/index.html" ]; then
-    echo "borgesdebioyizador is not built: run 'npm ci && npm run build' in $BORGES" >&2
-    exit 1
-  fi
-  mkdir -p "$OUT/borgesdebioyizador"
-  # Only the hub's 404.html is used by Pages; drop the app's copies to avoid confusion.
-  tar -C "$BORGES/out" -cf - --exclude=./404.html --exclude=./404 . | tar -C "$OUT/borgesdebioyizador" -xf -
-fi
+# rayo borgesdebioyizador is NOT part of this site anymore (BORGES is ignored on purpose).
 
 sha() { if [ -n "$1" ]; then git -C "$1" rev-parse HEAD 2>/dev/null || echo unknown; else echo none; fi; }
 printf '{"hub":"%s","choppy":"%s","borges":"%s","built_at":"%s"}\n' \
