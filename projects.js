@@ -28,18 +28,6 @@ window.BZ_PROJECTS = [
     }
   },
   {
-    id: "bonxai-pruner",
-    name: "BonXai Pruner",
-    status: "code",
-    url: "https://github.com/ondanueve/BonXai-Pruner",
-    repo: "https://github.com/ondanueve/BonXai-Pruner",
-    kind: { en: "Chrome extension", es: "Extensión de Chrome" },
-    desc: {
-      en: "Prunes your X feed in real time with a plain-language instruction, using Chrome's on-device Gemini Nano. Free, private, no cloud APIs.",
-      es: "Poda tu feed de X en tiempo real a partir de una instrucción en lenguaje natural, con Gemini Nano dentro de Chrome. Gratis, privado, sin APIs en la nube."
-    }
-  },
-  {
     id: "borgesdebioyizador",
     name: "rayo borgesdebioyizador",
     status: "live",
