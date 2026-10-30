@@ -1,6 +1,6 @@
 # Bitcoinizate
 
-The hub at **https://bitcoinizate.com/**: a single static page that lists every project.
+The hub at **https://bitcoinizate.com/**: a single static page that lists every project (today: Choppy Bitcoin).
 
 ## Projects
 
@@ -14,7 +14,7 @@ The list lives in [`projects.js`](projects.js). To add a project, append one obj
 - `/choppy-bitcoin/` — the public [`ondanueve/choppy-bitcoin`](https://github.com/ondanueve/choppy-bitcoin) repo, checked out at build time
 - `/build.json` — which commit of each repo is live
 
-It runs on every push to `main`, by hand, and every 3 hours (the scheduled run only deploys if the hub or Choppy Bitcoin changed). To publish a Choppy Bitcoin or RB change right away:
+It runs on every push to `main`, by hand, and every 3 hours (the scheduled run only deploys if the hub or Choppy Bitcoin changed). To publish a Choppy Bitcoin change right away:
 
 ```sh
 gh workflow run pages.yml -R ondanueve/bitcoinizate
