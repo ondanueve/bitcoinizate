@@ -1,11 +1,9 @@
 # Publishes bitcoinizate.com: this repo (the hub) at /, plus the public
-# ondanueve/choppy-bitcoin repo under /choppy-bitcoin/ and the static build of the
-# public ondanueve/borgesdebioyizador repo under /borgesdebioyizador/.
+# ondanueve/choppy-bitcoin repo under /choppy-bitcoin/.
 # Runs on push to main, by hand (Actions tab or `gh workflow run pages.yml`),
-# and every 3 hours. The scheduled run only redeploys when either repo has a
+# and every 3 hours. The scheduled run only redeploys when the hub or choppy-bitcoin has a
 # new commit since the live build (compared with https://bitcoinizate.com/build.json).
-# No secrets or PATs needed: both project repos are public, and the borgesdebioyizador
-# build only contains public config (its backend is on Supabase).
+# No secrets or PATs needed: the project repo is public.
 name: pages
 
 on:
@@ -39,49 +37,27 @@ jobs:
           ref: main
           path: _choppy
 
-      - name: Check out borgesdebioyizador
-        uses: actions/checkout@v7
-        with:
-          repository: ondanueve/RB
-          ref: main
-          path: _borges
-
       - name: Skip scheduled run if nothing changed
         id: check
         run: |
           hub="$(git rev-parse HEAD)"
           choppy="$(git -C _choppy rev-parse HEAD)"
-          borges="$(git -C _borges rev-parse HEAD)"
-          echo "hub=$hub choppy=$choppy borges=$borges"
+          echo "hub=$hub choppy=$choppy"
           skip=false
           if [ "${{ github.event_name }}" = "schedule" ]; then
             live="$(curl -fsS --max-time 20 https://bitcoinizate.com/build.json || true)"
             echo "live build: $live"
             if [ -n "$live" ] \
               && [ "$(echo "$live" | jq -r .hub)" = "$hub" ] \
-              && [ "$(echo "$live" | jq -r .choppy)" = "$choppy" ] \
-              && [ "$(echo "$live" | jq -r .borges)" = "$borges" ]; then
+              && [ "$(echo "$live" | jq -r .choppy)" = "$choppy" ]; then
               skip=true
             fi
           fi
           echo "skip=$skip" >> "$GITHUB_OUTPUT"
 
-      - uses: actions/setup-node@v7
-        if: steps.check.outputs.skip != 'true'
-        with:
-          node-version: 22
-
-      - name: Build borgesdebioyizador (static export)
-        if: steps.check.outputs.skip != 'true'
-        working-directory: _borges
-        run: |
-          npm ci --no-audit --no-fund
-          npm test
-          npm run build
-
       - name: Assemble site
         if: steps.check.outputs.skip != 'true'
-        run: scripts/assemble.sh _choppy _site _borges
+        run: scripts/assemble.sh _choppy _site
 
       - name: Check local links
         if: steps.check.outputs.skip != 'true'
