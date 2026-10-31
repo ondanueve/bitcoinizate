@@ -10,3 +10,6 @@
 ## mp192 (2026-10-28)
 - `replaced-mp192/`: the AI Studio chess-pool JPGs (saavedra, kinghunt, goldcoins, century) live from mp189 to mp191, named `chess-<slug>-wide.replaced-mp192.jpg`.
 - `chess-gpt-mp192/`: ChatGPT sources (1942x809 PNG) of their replacements, drawn with chess-opera and chess-evergreen as style references so all 7 match (tag `chs2`).
+
+## mp198 (2026-10-30)
+- `outcomes-mp198/`: post-decision (result screen) art for 12 arc cards, 28 live images (tag `post6`). `raw/` has all 34 AI Studio (Nano Banana 2 Lite, 1584x672 PNG) downloads, including the rejected first tries (casino-win, casino-c, poker-bust, poker-c, stateVisit-b, baby-c; the `-v2` files are the ones used). `prompts.md` / `prompts.json` have the scene prompts and references. Live JPGs are center-cropped to 2.4:1, Lanczos-upscaled to 1920x800 with light sharpening (`chance/<id>-<key>-wide.jpg?v=post6`).
