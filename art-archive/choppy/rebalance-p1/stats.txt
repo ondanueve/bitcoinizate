@@ -1,0 +1,33 @@
+Total arc images: 76 (with Choppy: 62)
+Choppy: 62 images (82%) [62 certain]
+Marek: 35 images (46%) [32 certain]
+Nico: 16 images (21%) [12 certain]
+Paco: 14 images (18%) [13 certain]
+Ortega: 4 images (5%) [4 certain]
+Lena: 0 images (0%) [0 certain]
+Marek present: 35 = 46% of all, 56% of Choppy images
+Choppy+Marek ONLY (nobody else in frame): 6 = 8% of all arc images
+Choppy+Marek as only NAMED cast (anonymous extras allowed): 24 = 32% of all, 39% of Choppy images
+Unique compositions (battle blocs collapsed to lattice set): 61; Marek in 23 (38%); C+M-only-named 12 (20%)
+battle (26): Marek 22/26; C+M-only-named 20/26
+cards+outcomes (50): Marek 13/50; C+M-only-named 4/50
+
+Lighting distribution (all 76 images):
+  golden hour / sunset: 39 (51%)
+  night / blue hour: 13 (17%)
+  interior warm (lamp/lantern/golden window): 11 (14%)
+  interior cool / neutral: 4 (5%)
+  overcast / hazy gray: 4 (5%)
+  midday bright (blue sky): 4 (5%)
+  dark storm: 1 (1%)
+Lighting distribution (unique compositions, 61):
+  golden hour / sunset: 31 (51%)
+  interior warm (lamp/lantern/golden window): 11 (18%)
+  night / blue hour: 9 (15%)
+  interior cool / neutral: 4 (7%)
+  overcast / hazy gray: 4 (7%)
+  dark storm: 1 (2%)
+  midday bright (blue sky): 1 (2%)
+Measured colour temperature (mean R/B of the whole frame): very warm 44 (58%), warm 20 (26%), neutral 10 (13%), cool 2 (3%)
+Golden-hour + warm-interior (amber light) combined: 50 = 66%
+Choppy images in golden hour: 36/62 = 58%
