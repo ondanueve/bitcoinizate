@@ -1,0 +1,8 @@
+CURRENT: Marek in 35/76 (46%), Nico 16/76 (21%), Paco 14/76 (18%), named cast exactly Choppy+Marek 24/76 (31%)
+   lighting: golden hour / sunset 39 (51%), night / blue hour 13 (17%), interior warm (lamp/lantern) 11 (14%), interior cool / neutral 4 (5%), overcast / hazy gray 4 (5%), midday bright 4 (5%), dark storm 1 (1%)
+After P1: Marek in 23/76 (30%), Nico 40/76 (52%), Paco 41/76 (53%), named cast exactly Choppy+Marek 1/76 (1%)
+   lighting: golden hour / sunset 22 (28%), overcast / hazy gray 11 (14%), interior warm (lamp/lantern) 9 (11%), night / blue hour 8 (10%), interior cool / neutral 6 (7%), cold pre-dawn / blue-gray dawn 4 (5%), blue-hour twilight (sun long gone) 4 (5%), storm / rain 4 (5%), bright clear morning 4 (5%), midday bright 2 (2%), dark storm 1 (1%), fog 1 (1%)
+After P1+P2: Marek in 24/76 (31%), Nico 46/76 (60%), Paco 46/76 (60%), named cast exactly Choppy+Marek 1/76 (1%)
+   lighting: golden hour / sunset 16 (21%), overcast / hazy gray 11 (14%), night / blue hour 9 (11%), interior warm (lamp/lantern) 9 (11%), interior cool / neutral 6 (7%), midday bright 5 (6%), cold pre-dawn / blue-gray dawn 5 (6%), storm / rain 5 (6%), blue-hour twilight (sun long gone) 4 (5%), bright clear morning 4 (5%), dark storm 1 (1%), fog 1 (1%)
+After P1+P2+P3: Marek in 24/76 (31%), Nico 47/76 (61%), Paco 49/76 (64%), named cast exactly Choppy+Marek 1/76 (1%)
+   lighting: overcast / hazy gray 15 (19%), night / blue hour 9 (11%), interior warm (lamp/lantern) 9 (11%), cold pre-dawn / blue-gray dawn 8 (10%), interior cool / neutral 7 (9%), midday bright 7 (9%), storm / rain 6 (7%), bright clear morning 5 (6%), golden hour / sunset 4 (5%), blue-hour twilight (sun long gone) 4 (5%), dark storm 1 (1%), fog 1 (1%)
