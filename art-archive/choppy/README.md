@@ -16,3 +16,6 @@
 
 ## mp199 (2026-11-01)
 - `rebalance-p1/`: Bitcoin Country balance pass 1 (29 images; tags `cin17` for the 4 cards, `bat4` for the 25 battle images). Marek no longer appears alone with Choppy, Nico and Paco get more screen time, and lighting varies (overcast, fog, blue hour, night, moonlight) instead of golden hour. `replaced/` has the 29 JPGs live before mp199 (`<name>-wide.replaced-mp199.jpg`). `raw/` has the AI Studio (Nano Banana 2 Lite, 1584x672 PNG) sources of the live art (`battle-pact-1-post-v2` and `battle-gen-1-post-v2` are the ones used); `raw/_rejected/` has the first versions of those two (letters on a ship hull; the generic battle-gen-1-post redone). `prompts.json` / `prompts.md` have the prompts, `plan.md` / `census.md` the analysis and the card text tweaks, `refs/` the style references, and `p1-final-sheet-*.jpg` contact sheets of the new art.
+
+## mp200 (2026-11-01)
+- `rebalance-p1/`: `battle-gen-1-post` redone because v2 had a US flag patch on the soldier's uniform. `raw/battle-gen-1-post-v3.png` is the live source (tag `bat5`); `raw/_rejected/battle-gen-1-post-v2.png` (moved there from `raw/`) was live in mp199, and `replaced/battle-gen-1-post-wide.replaced-mp200.jpg` is its JPG. The v1 source and the mp198-era JPG (`...replaced-mp199.jpg`) stay as before.
