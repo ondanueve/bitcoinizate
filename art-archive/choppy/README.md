@@ -19,3 +19,6 @@
 
 ## mp200 (2026-11-01)
 - `rebalance-p1/`: `battle-gen-1-post` redone because v2 had a US flag patch on the soldier's uniform. `raw/battle-gen-1-post-v3.png` is the live source (tag `bat5`); `raw/_rejected/battle-gen-1-post-v2.png` (moved there from `raw/`) was live in mp199, and `replaced/battle-gen-1-post-wide.replaced-mp200.jpg` is its JPG. The v1 source and the mp198-era JPG (`...replaced-mp199.jpg`) stay as before.
+
+## mp201 (2026-11-02)
+- `chatgpt-mp201/`: first two images of the gradual ChatGPT (free plan, gpt-image) replacement of the game art: `battle-gen-1-post` (tag `bat6`) and `citadelProblem` (tag `cin18`). `replaced/` has the JPGs live before mp201 (`<name>-wide.replaced-mp201.jpg`; the battle one is the mp200 AI Studio v3). `raw/` has the ChatGPT sources (1942x809 PNG) of the live art, which is center-cropped and resized to 1920x800. `prompts/` has the prompt pasted into ChatGPT (`<name>-prompt-chatgpt.txt`) and the reference sheet attached with it (`<name>-refsheet.jpg`).
