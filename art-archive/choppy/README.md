@@ -22,3 +22,6 @@
 
 ## mp201 (2026-11-02)
 - `chatgpt-mp201/`: first two images of the gradual ChatGPT (free plan, gpt-image) replacement of the game art: `battle-gen-1-post` (tag `bat6`) and `citadelProblem` (tag `cin18`). `replaced/` has the JPGs live before mp201 (`<name>-wide.replaced-mp201.jpg`; the battle one is the mp200 AI Studio v3). `raw/` has the ChatGPT sources (1942x809 PNG) of the live art, which is center-cropped and resized to 1920x800. `prompts/` has the prompt pasted into ChatGPT (`<name>-prompt-chatgpt.txt`) and the reference sheet attached with it (`<name>-refsheet.jpg`).
+
+## mp203 (2026-11-03)
+- `chatgpt-mp203/`: next three ChatGPT (free plan, gpt-image) replacements: `somethingBetter`, `theQuestion` and `fourthColor` (all tag `cin18`). Same layout as `chatgpt-mp201/`: `replaced/` has the JPGs live before mp203 (`<name>-wide.replaced-mp203.jpg`), `raw/` the ChatGPT sources (1942x809 PNG, center-cropped and resized to 1920x800 for the game), `prompts/` the prompt pasted into ChatGPT and the attached reference sheet. (mp202 was a tutorial-only game release.)
