@@ -21,13 +21,17 @@
       notFoundB: "This page is not on the shelf. It may have moved.",
       backHome: "Back to Bitcoinizate",
       redirecting: "Redirecting…",
-      noscript: "The project list needs JavaScript. Choppy Bitcoin is at /choppy-bitcoin/.",
+      noscript: "The project list needs JavaScript. Choppy Bitcoin is at /choppy-bitcoin/ and Parques en Guerra is at https://ondanueve.github.io/batalla-naval-parques/.",
       privacyH: "Privacy policy",
       privacyB1: "Bitcoinizate is a browser games site. We do not sell a token, we do not run ads, and we do not sell your data.",
       privacyB2: "If you play as a guest, this device keeps your best score, awards, and settings such as look, sound, and language. That stays in local storage on the device. We do not receive it.",
       privacyB3: "If you create an account we keep your email, a password hash (handled by Supabase), your alias, optional Bitcoin and Lightning payout addresses, your cloud high score, a saved run tape, awards, and your versus rating. Feedback you send while signed in is stored with your account.",
       privacyB4: "We use that to sign you in, show a public leaderboard of alias and score, pay prize winners, and read feedback. We do not sell lists. Donations go to our Lightning invoice or Bitcoin address. The payment itself does not tell us who you are.",
       privacyB5: "You can sign out anytime. To delete an account, email hello@bitcoinizate.com from the address you registered with. We delete the account and the profile tied to it.",
+      privacyPH: "Parques en Guerra",
+      privacyP1: "<a href=\"https://ondanueve.github.io/batalla-naval-parques/\">Parques en Guerra</a> has no backend of its own and no accounts. We do not ask for an email, alias, or password.",
+      privacyP2: "Online mode connects the two players directly, browser to browser, using WebRTC. It uses the public <a href=\"https://peerjs.com/\">PeerJS</a> server only for matchmaking and signaling, so that third-party service can see the players' IP addresses. Matches are not stored on any server.",
+      privacyP3: "Soon the game will use the device's local storage (localStorage) only to remember whether you have seen the tutorial. That stays on your device. We do not receive it.",
       privacyB6: "Questions: <a href=\"mailto:hello@bitcoinizate.com\">hello@bitcoinizate.com</a>"
     },
     es: {
@@ -48,13 +52,17 @@
       notFoundB: "Esta página no está en el estante. Puede que se haya mudado.",
       backHome: "Volver a Bitcoinizate",
       redirecting: "Redirigiendo…",
-      noscript: "La lista de proyectos necesita JavaScript. Choppy Bitcoin está en /choppy-bitcoin/.",
+      noscript: "La lista de proyectos necesita JavaScript. Choppy Bitcoin está en /choppy-bitcoin/ y Parques en Guerra en https://ondanueve.github.io/batalla-naval-parques/.",
       privacyH: "Política de privacidad",
       privacyB1: "Bitcoinizate es un sitio de juegos en el navegador. No vendemos un token, no mostramos anuncios y no vendemos tus datos.",
       privacyB2: "Si juegas como invitado, este dispositivo guarda tu mejor puntaje, premios de partida y ajustes como el aspecto, el sonido y el idioma. Eso queda en el almacenamiento local del dispositivo. No lo recibimos.",
       privacyB3: "Si creas una cuenta guardamos tu correo, un hash de contraseña (lo maneja Supabase), tu alias, direcciones opcionales de Bitcoin y Lightning para cobros, tu puntaje en la nube, una cinta de partida guardada, premios y tu rating de versus. El feedback que envías con la sesión iniciada se guarda con tu cuenta.",
       privacyB4: "Eso sirve para iniciar sesión, mostrar un ranking público de alias y puntaje, pagar premios y leer el feedback. No vendemos listas. Las donaciones van a nuestra factura Lightning o dirección Bitcoin. El pago en sí no nos dice quién eres.",
       privacyB5: "Puedes cerrar sesión cuando quieras. Para borrar una cuenta escribe a hello@bitcoinizate.com desde el correo con el que te registraste. Borramos la cuenta y el perfil asociado.",
+      privacyPH: "Parques en Guerra",
+      privacyP1: "<a href=\"https://ondanueve.github.io/batalla-naval-parques/\">Parques en Guerra</a> no tiene servidor propio ni cuentas. No te pedimos correo, alias ni contraseña.",
+      privacyP2: "El modo en línea conecta a los dos jugadores directamente, de navegador a navegador, mediante WebRTC. Usa el servidor público de <a href=\"https://peerjs.com/\">PeerJS</a> solo para emparejar y señalizar, así que ese servicio de terceros puede ver las direcciones IP de los jugadores. Las partidas no se guardan en ningún servidor.",
+      privacyP3: "Pronto el juego usará el almacenamiento local del dispositivo (localStorage) solo para recordar si ya viste el tutorial. Eso queda en tu dispositivo. No lo recibimos.",
       privacyB6: "Consultas: <a href=\"mailto:hello@bitcoinizate.com\">hello@bitcoinizate.com</a>"
     }
   };
