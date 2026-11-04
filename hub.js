@@ -31,7 +31,7 @@
       privacyPH: "Parques en Guerra",
       privacyP1: "<a href=\"https://ondanueve.github.io/batalla-naval-parques/\">Parques en Guerra</a> has no backend of its own and no accounts. We do not ask for an email, alias, or password.",
       privacyP2: "Online mode connects the two players directly, browser to browser, using WebRTC. It uses the public <a href=\"https://peerjs.com/\">PeerJS</a> server only for matchmaking and signaling, so that third-party service can see the players' IP addresses. Matches are not stored on any server.",
-      privacyP3: "Soon the game will use the device's local storage (localStorage) only to remember whether you have seen the tutorial. That stays on your device. We do not receive it.",
+      privacyP3: "The game uses the device's local storage (localStorage) only to remember whether you have seen the intro and the tutorial. That stays on your device. We do not receive it.",
       privacyB6: "Questions: <a href=\"mailto:hello@bitcoinizate.com\">hello@bitcoinizate.com</a>"
     },
     es: {
@@ -62,7 +62,7 @@
       privacyPH: "Parques en Guerra",
       privacyP1: "<a href=\"https://ondanueve.github.io/batalla-naval-parques/\">Parques en Guerra</a> no tiene servidor propio ni cuentas. No te pedimos correo, alias ni contraseña.",
       privacyP2: "El modo en línea conecta a los dos jugadores directamente, de navegador a navegador, mediante WebRTC. Usa el servidor público de <a href=\"https://peerjs.com/\">PeerJS</a> solo para emparejar y señalizar, así que ese servicio de terceros puede ver las direcciones IP de los jugadores. Las partidas no se guardan en ningún servidor.",
-      privacyP3: "Pronto el juego usará el almacenamiento local del dispositivo (localStorage) solo para recordar si ya viste el tutorial. Eso queda en tu dispositivo. No lo recibimos.",
+      privacyP3: "El juego usa el almacenamiento local del dispositivo (localStorage) solo para recordar si ya viste la intro y el tutorial. Eso queda en tu dispositivo. No lo recibimos.",
       privacyB6: "Consultas: <a href=\"mailto:hello@bitcoinizate.com\">hello@bitcoinizate.com</a>"
     }
   };
