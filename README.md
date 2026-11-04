@@ -1,6 +1,6 @@
 # Bitcoinizate
 
-The hub at **https://bitcoinizate.com/**: a single static page that lists every project (today: Choppy Bitcoin).
+The hub at **https://bitcoinizate.com/**: a single static page that lists every project (today: Choppy Bitcoin and Parques en Guerra; Capital Capers and Aspirante a Escritor are listed as work in progress).
 
 ## Projects
 

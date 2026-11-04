@@ -5,7 +5,7 @@
   var dict = {
     en: {
       tagline: "A small shelf of projects",
-      intro: "Games made one at a time. For now, Choppy Bitcoin; more will come.",
+      intro: "Games made one at a time. For now, Choppy Bitcoin and Parques en Guerra; more will come.",
       projects: "Projects",
       open: "Open",
       play: "Play",
@@ -32,7 +32,7 @@
     },
     es: {
       tagline: "Un pequeño estante de proyectos",
-      intro: "Juegos hechos de a uno. Por ahora, Choppy Bitcoin; vendrán más.",
+      intro: "Juegos hechos de a uno. Por ahora, Choppy Bitcoin y Parques en Guerra; vendrán más.",
       projects: "Proyectos",
       open: "Abrir",
       play: "Jugar",

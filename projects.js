@@ -28,6 +28,19 @@ window.BZ_PROJECTS = [
     }
   },
   {
+    id: "parques-en-guerra",
+    name: "Parques en Guerra",
+    status: "live",
+    url: "https://ondanueve.github.io/batalla-naval-parques/",
+    cta: "play",
+    repo: "https://github.com/ondanueve/batalla-naval-parques",
+    kind: { en: "Browser game", es: "Juego en el navegador" },
+    desc: {
+      en: "A territorial battle in Argentina's national parks. Play as Argentina defending Nahuel Huapi, Iguazú and Los Glaciares, or as an invader (Chile, UK, USA, China, Russia or Brazil), against the CPU or online.",
+      es: "Batalla territorial en los parques nacionales argentinos. Defendé Nahuel Huapi, Iguazú y Los Glaciares como Argentina, o invadí como Chile, UK, EE.UU., China, Rusia o Brasil, contra la máquina o en línea."
+    }
+  },
+  {
     id: "capital-capers",
     name: "Capital Capers",
     status: "soon",
