@@ -14,7 +14,7 @@
       soon: "Coming soon",
       statusLive: "Live",
       statusCode: "Open source",
-      statusSoon: "In the works",
+      statusSoon: "Work in progress",
       privacy: "Privacy",
       contact: "Contact",
       notFoundH: "Page not found",
@@ -41,7 +41,7 @@
       soon: "Próximamente",
       statusLive: "En línea",
       statusCode: "Código abierto",
-      statusSoon: "En preparación",
+      statusSoon: "En desarrollo",
       privacy: "Privacidad",
       contact: "Contacto",
       notFoundH: "Página no encontrada",
@@ -101,11 +101,11 @@
       var head = el("h3");
       if (p.status !== "soon" && p.url) head.appendChild(link(p.url, p.name)); else head.textContent = p.name;
       var meta = el("p", { "class": "meta" });
-      meta.textContent = pick(p.kind) + " · " + t(p.status === "live" ? "statusLive" : p.status === "code" ? "statusCode" : "statusSoon");
+      meta.textContent = pick(p.kind) + (p.status === "soon" ? "" : " · " + t(p.status === "live" ? "statusLive" : "statusCode"));
       var desc = el("p", { "class": "desc" }, pick(p.desc));
       var acts = el("p", { "class": "acts" });
       if (p.status === "soon") {
-        acts.appendChild(el("span", { "class": "soon" }, t("soon")));
+        acts.appendChild(el("span", { "class": "wip" }, t("statusSoon")));
       } else {
         if (p.url && p.url !== p.repo) acts.appendChild(link(p.url, t(p.cta || "open"), "btn"));
         if (p.more) acts.appendChild(link(p.more, t("about")));

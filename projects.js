@@ -27,4 +27,24 @@ window.BZ_PROJECTS = [
       es: "Un arcade de trading. Vuela el ₿ entre velas japonesas, compra en la baja, vende en la suba y sobrevive a los cisnes negros. El puntaje es dinero de juego."
     }
   },
+  {
+    id: "capital-capers",
+    name: "Capital Capers",
+    status: "soon",
+    kind: { en: "Browser board game", es: "Juego de mesa en el navegador" },
+    desc: {
+      en: "A race across Europe's capitals.",
+      es: "Una carrera por las capitales de Europa."
+    }
+  },
+  {
+    id: "aspirante-escritor",
+    name: "Aspirante a Escritor",
+    status: "soon",
+    kind: { en: "Browser game", es: "Juego en el navegador" },
+    desc: {
+      en: "A simulator about an aspiring writer's life.",
+      es: "Simulador de la vida de un escritor que busca publicar."
+    }
+  },
 ];
