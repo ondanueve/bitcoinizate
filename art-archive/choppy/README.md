@@ -25,3 +25,6 @@
 
 ## mp203 (2026-11-03)
 - `chatgpt-mp203/`: next three ChatGPT (free plan, gpt-image) replacements: `somethingBetter`, `theQuestion` and `fourthColor` (all tag `cin18`). Same layout as `chatgpt-mp201/`: `replaced/` has the JPGs live before mp203 (`<name>-wide.replaced-mp203.jpg`), `raw/` the ChatGPT sources (1942x809 PNG, center-cropped and resized to 1920x800 for the game), `prompts/` the prompt pasted into ChatGPT and the attached reference sheet. (mp202 was a tutorial-only game release.)
+
+## mp213 (2026-11-06)
+- `chatgpt-mp213/`: ChatGPT (free plan, gpt-image) replacement of `islandInspection-a` (tag `post5`). Same layout as prior `chatgpt-mp*` folders: `replaced/` has the JPG live before mp213, `raw/` the ChatGPT source (1942x809 PNG, center-cropped and resized to 1920x800 for the game), `prompts/` the prompt and attached reference sheet.
