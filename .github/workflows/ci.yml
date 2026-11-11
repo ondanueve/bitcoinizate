@@ -1,0 +1,34 @@
+# Required check for pull requests. Assembles the hub with choppy-bitcoin
+# and runs the local link checker. Also checks that privacy copy stays
+# bilingual (EN/ES) and does not use voseo.
+name: ci
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Check out choppy-bitcoin
+        uses: actions/checkout@v7
+        with:
+          repository: ondanueve/choppy-bitcoin
+          ref: main
+          path: _choppy
+
+      - name: Assemble site
+        run: scripts/assemble.sh _choppy _site
+
+      - name: Check local links
+        run: python3 scripts/check-links.py _site
+
+      - name: Privacy i18n (EN/ES, no voseo)
+        run: python3 scripts/check-privacy-i18n.py
