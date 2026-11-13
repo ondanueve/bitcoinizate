@@ -21,10 +21,10 @@ window.BZ_PROJECTS = [
     cta: "play",
     more: "/choppy-bitcoin/about/",
     repo: "https://github.com/ondanueve/choppy-bitcoin",
-    kind: { en: "Browser game", es: "Juego en el navegador" },
+    kind: { en: "Browser game", es: "Browser game" },
     desc: {
-      en: "A trading arcade. Fly the ₿ through Japanese candlesticks, buy the dip, sell the rip and survive the black swans. Scores are play money.",
-      es: "Un arcade de trading. Vuela el ₿ entre velas japonesas, compra en la baja, vende en la suba y sobrevive a los cisnes negros. El puntaje es dinero de juego."
+      en: "A trading arcade in your browser. Fly the ₿ through Japanese candlesticks: time the market or just DCA and chill. Climb the daily Ranked, or set off on story adventures, from family stakes to the shores of Bitcoin Country.",
+      es: "A trading arcade in your browser. Fly the ₿ through Japanese candlesticks: time the market or just DCA and chill. Climb the daily Ranked, or set off on story adventures, from family stakes to the shores of Bitcoin Country."
     }
   },
   {
