@@ -41,6 +41,19 @@ window.BZ_PROJECTS = [
     }
   },
   {
+    id: "rayo-borgesdebioyizador",
+    name: "rayo borgesdebioyizador",
+    status: "live",
+    url: "https://ondanueve.github.io/RB/",
+    cta: "open",
+    repo: "https://github.com/ondanueve/RB",
+    kind: { en: "Literary generator", es: "Generador literario" },
+    desc: {
+      en: "An apocryphal-diary generator in the style of Bioy Casares's notes on Borges. Pick two public figures with a documented bond and a date; it writes two diary pages. Parody · AI-generated fiction.",
+      es: "Generador de diarios apócrifos al estilo de las anotaciones de Bioy Casares sobre Borges. Elegís dos figuras públicas con un vínculo documentado y una fecha; te arma dos páginas de diario. Parodia · Ficción generada por IA."
+    }
+  },
+  {
     id: "capital-capers",
     name: "Capital Capers",
     status: "soon",
