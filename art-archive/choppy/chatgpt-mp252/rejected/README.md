@@ -1,0 +1,5 @@
+# Rejected attempts (mp252 batch)
+
+- `111-speeding-gpt1.png`: first ChatGPT generation for queue rank 111 (speeding main). Not published: not clearly better than the live art; Choppy's leg hangs out of the car window awkwardly and the officer wears a shoulder patch/badge (breaks the no-insignia rule). Prompt `111-speeding-prompt.txt`, refsheet `111-speeding-refsheet.jpg`. The live speeding image is unchanged; rank 111 stays todo.
+- `113-uncle-gpt1.png`: first ChatGPT generation for queue rank 113 (uncle main). Not published: Choppy's pointing glove overlaps the ₿ (intact-emblem rule), and Uncle Héctor sits in the room although the story is a message from him. Prompt `113-uncle-prompt.txt`, refsheet `113-uncle-refsheet.jpg`. The live uncle image is unchanged; rank 113 stays todo.
+- `114-wallet-gpt1.png`: first ChatGPT generation for queue rank 114 (wallet main). Not published: two wallets at once (the driver hands one over while Choppy already holds an empty one), so the story logic is broken. Prompt `114-wallet-prompt.txt`, refsheet `114-wallet-refsheet.jpg`. The live wallet image is unchanged; rank 114 stays todo.
