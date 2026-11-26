@@ -5,7 +5,7 @@
   var dict = {
     en: {
       tagline: "A small shelf of projects",
-      intro: "Games made one at a time. For now, Choppy Bitcoin and Parques en Guerra; more will come.",
+      intro: "Games made one at a time. For now, Choppy Bitcoin, Stonk Arena and Parques en Guerra; more will come.",
       projects: "Projects",
       open: "Open",
       play: "Play",
@@ -21,7 +21,7 @@
       notFoundB: "This page is not on the shelf. It may have moved.",
       backHome: "Back to Bitcoinizate",
       redirecting: "Redirecting…",
-      noscript: "The project list needs JavaScript. Choppy Bitcoin is at /choppy-bitcoin/ and Parques en Guerra is at https://ondanueve.github.io/batalla-naval-parques/.",
+      noscript: "The project list needs JavaScript. Choppy Bitcoin is at /choppy-bitcoin/, Stonk Arena is at https://stonk-arena.vercel.app/ and Parques en Guerra is at https://ondanueve.github.io/batalla-naval-parques/.",
       privacyH: "Privacy policy",
       privacyB1: "Bitcoinizate is a browser games site. We do not sell a token, we do not run ads, and we do not sell your data.",
       privacyB2: "If you play as a guest, this device keeps your best score, awards, and settings such as look, sound, and language. That stays in local storage on the device. We do not receive it.",
@@ -33,11 +33,13 @@
       privacyP1: "<a href=\"https://ondanueve.github.io/batalla-naval-parques/\">Parques en Guerra</a> has no backend of its own and no accounts. We do not ask for an email, alias, or password.",
       privacyP2: "Online mode connects the two players directly, browser to browser, using WebRTC. It uses the public <a href=\"https://peerjs.com/\">PeerJS</a> server only for matchmaking and signaling, so that third-party service can see the players' IP addresses. Matches are not stored on any server.",
       privacyP3: "The game uses the device's local storage (localStorage) only to remember whether you have seen the intro and the tutorial. That stays on your device. We do not receive it.",
+      privacySH: "Stonk Arena",
+      privacyS1: "<a href=\"https://stonk-arena.vercel.app/\">Stonk Arena</a> has no accounts. Progress, decks, the campaign and settings stay in this browser's local storage. We do not receive them.",
       privacyB6: "Questions: <a href=\"mailto:hello@bitcoinizate.com\">hello@bitcoinizate.com</a>"
     },
     es: {
       tagline: "Un pequeño estante de proyectos",
-      intro: "Juegos hechos de a uno. Por ahora, Choppy Bitcoin y Parques en Guerra; vendrán más.",
+      intro: "Juegos hechos de a uno. Por ahora, Choppy Bitcoin, Stonk Arena y Parques en Guerra; vendrán más.",
       projects: "Proyectos",
       open: "Abrir",
       play: "Jugar",
@@ -53,7 +55,7 @@
       notFoundB: "Esta página no está en el estante. Puede que se haya mudado.",
       backHome: "Volver a Bitcoinizate",
       redirecting: "Redirigiendo…",
-      noscript: "La lista de proyectos necesita JavaScript. Choppy Bitcoin está en /choppy-bitcoin/ y Parques en Guerra en https://ondanueve.github.io/batalla-naval-parques/.",
+      noscript: "La lista de proyectos necesita JavaScript. Choppy Bitcoin está en /choppy-bitcoin/, Stonk Arena en https://stonk-arena.vercel.app/ y Parques en Guerra en https://ondanueve.github.io/batalla-naval-parques/.",
       privacyH: "Política de privacidad",
       privacyB1: "Bitcoinizate es un sitio de juegos en el navegador. No vendemos un token, no mostramos anuncios y no vendemos tus datos.",
       privacyB2: "Si juegas como invitado, este dispositivo guarda tu mejor puntaje, premios de partida y ajustes como el aspecto, el sonido y el idioma. Eso queda en el almacenamiento local del dispositivo. No lo recibimos.",
@@ -65,6 +67,8 @@
       privacyP1: "<a href=\"https://ondanueve.github.io/batalla-naval-parques/\">Parques en Guerra</a> no tiene servidor propio ni cuentas. No te pedimos correo, alias ni contraseña.",
       privacyP2: "El modo en línea conecta a los dos jugadores directamente, de navegador a navegador, mediante WebRTC. Usa el servidor público de <a href=\"https://peerjs.com/\">PeerJS</a> solo para emparejar y señalizar, así que ese servicio de terceros puede ver las direcciones IP de los jugadores. Las partidas no se guardan en ningún servidor.",
       privacyP3: "El juego usa el almacenamiento local del dispositivo (localStorage) solo para recordar si ya viste la intro y el tutorial. Eso queda en tu dispositivo. No lo recibimos.",
+      privacySH: "Stonk Arena",
+      privacyS1: "<a href=\"https://stonk-arena.vercel.app/\">Stonk Arena</a> no tiene cuentas. El progreso, los mazos, la campaña y los ajustes quedan en el almacenamiento local de este navegador. No los recibimos.",
       privacyB6: "Consultas: <a href=\"mailto:hello@bitcoinizate.com\">hello@bitcoinizate.com</a>"
     }
   };

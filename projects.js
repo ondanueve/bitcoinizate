@@ -28,6 +28,18 @@ window.BZ_PROJECTS = [
     }
   },
   {
+    id: "stonk-arena",
+    name: "Stonk Arena",
+    status: "live",
+    url: "https://stonk-arena.vercel.app",
+    cta: "play",
+    kind: { en: "Browser card game", es: "Juego de cartas en el navegador" },
+    desc: {
+      en: "A trading-card duel in the browser. Five desks try to take a rival Portfolio to zero while the tape cycles Bull, Bear and Chop. Build a book, hold or attack, and climb a six-floor campaign.",
+      es: "Un duelo de cartas en el navegador. Cinco mesas pelean para llevar el Portfolio rival a cero mientras el mercado rota entre Bull, Bear y Chop. Armá un mazo, aguantá o atacá, y subí una campaña de seis pisos."
+    }
+  },
+  {
     id: "parques-en-guerra",
     name: "Parques en Guerra",
     status: "live",
