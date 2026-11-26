@@ -5,13 +5,14 @@
   var dict = {
     en: {
       tagline: "A small shelf of projects",
-      intro: "Games made one at a time. For now, Choppy Bitcoin, Stonk Arena and Parques en Guerra; more will come.",
+      intro: "Games, tools, and literary toys, made one at a time. Live now: Choppy Bitcoin, Stonk Arena, Parques en Guerra, and rayo borgesdebioyizador. Two more are on the way.",
       projects: "Projects",
       open: "Open",
       play: "Play",
       about: "About",
       source: "Source",
       soon: "Coming soon",
+      startLabel: "First session.",
       statusLive: "Live",
       statusCode: "Open source",
       statusSoon: "Work in progress",
@@ -23,7 +24,7 @@
       redirecting: "Redirecting…",
       noscript: "The project list needs JavaScript. Choppy Bitcoin is at /choppy-bitcoin/, Stonk Arena is at https://stonk-arena.vercel.app/ and Parques en Guerra is at https://ondanueve.github.io/batalla-naval-parques/.",
       privacyH: "Privacy policy",
-      privacyB1: "Bitcoinizate is a browser games site. We do not sell a token, we do not run ads, and we do not sell your data.",
+      privacyB1: "Bitcoinizate is a shelf of games, tools, and literary toys. We do not sell a token, we do not run ads, and we do not sell your data.",
       privacyB2: "If you play as a guest, this device keeps your best score, awards, and settings such as look, sound, and language. That stays in local storage on the device. We do not receive it.",
       privacyB2a: "Choppy Bitcoin records anonymous aggregate counts of games started, finished, and shared, with no personal data, plus daily-candle scores if the player submits them.",
       privacyB3: "If you create an account we keep your email, a password hash (handled by Supabase), your alias, optional Bitcoin and Lightning payout addresses, your cloud high score, a saved run tape, awards, and your versus rating. Feedback you send while signed in is stored with your account.",
@@ -39,13 +40,14 @@
     },
     es: {
       tagline: "Un pequeño estante de proyectos",
-      intro: "Juegos hechos de a uno. Por ahora, Choppy Bitcoin, Stonk Arena y Parques en Guerra; vendrán más.",
+      intro: "Juegos, herramientas y juguetes literarios, hechos de a uno. En línea: Choppy Bitcoin, Stonk Arena, Parques en Guerra y rayo borgesdebioyizador. Dos más vienen en camino.",
       projects: "Proyectos",
       open: "Abrir",
       play: "Jugar",
       about: "Info",
       source: "Código",
       soon: "Próximamente",
+      startLabel: "Para empezar.",
       statusLive: "En línea",
       statusCode: "Código abierto",
       statusSoon: "En desarrollo",
@@ -57,12 +59,12 @@
       redirecting: "Redirigiendo…",
       noscript: "La lista de proyectos necesita JavaScript. Choppy Bitcoin está en /choppy-bitcoin/, Stonk Arena en https://stonk-arena.vercel.app/ y Parques en Guerra en https://ondanueve.github.io/batalla-naval-parques/.",
       privacyH: "Política de privacidad",
-      privacyB1: "Bitcoinizate es un sitio de juegos en el navegador. No vendemos un token, no mostramos anuncios y no vendemos tus datos.",
-      privacyB2: "Si juegas como invitado, este dispositivo guarda tu mejor puntaje, premios de partida y ajustes como el aspecto, el sonido y el idioma. Eso queda en el almacenamiento local del dispositivo. No lo recibimos.",
-      privacyB2a: "Choppy Bitcoin registra conteos agregados anónimos de partidas iniciadas, terminadas y compartidas, sin datos personales, y también los puntajes de la vela del día si el jugador los envía.",
-      privacyB3: "Si creas una cuenta guardamos tu correo, un hash de contraseña (lo maneja Supabase), tu alias, direcciones opcionales de Bitcoin y Lightning para cobros, tu puntaje en la nube, una cinta de partida guardada, premios y tu rating de versus. El feedback que envías con la sesión iniciada se guarda con tu cuenta.",
-      privacyB4: "Eso sirve para iniciar sesión, mostrar un ranking público de alias y puntaje, pagar premios y leer el feedback. No vendemos listas. Las donaciones van a nuestra factura Lightning o dirección Bitcoin. El pago en sí no nos dice quién eres.",
-      privacyB5: "Puedes cerrar sesión cuando quieras. Para borrar una cuenta escribe a hello@bitcoinizate.com desde el correo con el que te registraste. Borramos la cuenta y el perfil asociado.",
+      privacyB1: "Bitcoinizate es un estante de juegos, herramientas y juguetes literarios. No vendemos un token, no mostramos anuncios y no vendemos tus datos.",
+      privacyB2: "Si jugás como invitado, este dispositivo guarda tu mejor puntaje, premios de partida y ajustes como el aspecto, el sonido y el idioma. Eso queda en el almacenamiento local. No lo recibimos.",
+      privacyB2a: "Choppy Bitcoin anota conteos agregados y anónimos de partidas empezadas, terminadas y compartidas, sin datos personales, y también el puntaje de la vela del día si lo enviás.",
+      privacyB3: "Si creás una cuenta guardamos tu correo, un hash de contraseña (lo maneja Supabase), tu alias, direcciones opcionales de Bitcoin y Lightning para cobros, tu puntaje en la nube, una cinta de partida guardada, premios y tu rating de versus. El feedback que mandás con la sesión iniciada se guarda con la cuenta.",
+      privacyB4: "Eso sirve para entrar, mostrar un ranking público de alias y puntaje, pagar premios y leer el feedback. No vendemos listas. Las donaciones van a una factura Lightning o una dirección Bitcoin. El pago en sí no dice quién sos.",
+      privacyB5: "Podés cerrar sesión cuando quieras. Para borrar una cuenta, escribinos a hello@bitcoinizate.com desde el correo con el que te registraste. Borramos la cuenta y el perfil asociado.",
       privacyPH: "Parques en Guerra",
       privacyP1: "<a href=\"https://ondanueve.github.io/batalla-naval-parques/\">Parques en Guerra</a> no tiene servidor propio ni cuentas. No te pedimos correo, alias ni contraseña.",
       privacyP2: "El modo en línea conecta a los dos jugadores directamente, de navegador a navegador, mediante WebRTC. Usa el servidor público de <a href=\"https://peerjs.com/\">PeerJS</a> solo para emparejar y señalizar, así que ese servicio de terceros puede ver las direcciones IP de los jugadores. Las partidas no se guardan en ningún servidor.",
@@ -117,6 +119,12 @@
       var meta = el("p", { "class": "meta" });
       meta.textContent = pick(p.kind) + (p.status === "soon" ? "" : " · " + t(p.status === "live" ? "statusLive" : "statusCode"));
       var desc = el("p", { "class": "desc" }, pick(p.desc));
+      var note = null;
+      if (p.note) {
+        note = el("p", { "class": "note" });
+        note.appendChild(el("span", null, t("startLabel") + " "));
+        note.appendChild(document.createTextNode(pick(p.note)));
+      }
       var acts = el("p", { "class": "acts" });
       if (p.status === "soon") {
         acts.appendChild(el("span", { "class": "wip" }, t("statusSoon")));
@@ -125,7 +133,10 @@
         if (p.more) acts.appendChild(link(p.more, t("about")));
         if (p.repo) acts.appendChild(link(p.repo, t("source")));
       }
-      body.appendChild(head); body.appendChild(meta); body.appendChild(desc); body.appendChild(acts);
+      if (p.image) body.appendChild(el("img", { "class": "still", src: p.image, alt: pick(p.alt) || p.name, width: "1200", height: "675" }));
+      body.appendChild(head); body.appendChild(meta); body.appendChild(desc);
+      if (note) body.appendChild(note);
+      body.appendChild(acts);
       li.appendChild(num); li.appendChild(body);
       box.appendChild(li);
     });

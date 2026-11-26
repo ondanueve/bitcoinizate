@@ -1,6 +1,6 @@
 :root {
   --ink: #0d0d0d; --paper: #f3efe6; --gold: #F2A900; --mute: #9a968e; --rule: #2a2a2e;
-  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, "Times New Roman", serif;
+  --serif: "Newsreader", "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, "Times New Roman", serif;
   --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, "Courier New", monospace;
 }
 * { box-sizing: border-box; }
@@ -11,14 +11,14 @@ body {
 }
 a { color: var(--gold); text-decoration: none; }
 a:hover, a:focus-visible { text-decoration: underline; text-underline-offset: 3px; }
-.wrap { width: min(680px, calc(100% - 40px)); margin: 0 auto; padding: 44px 0 72px; }
+.wrap { width: min(760px, calc(100% - 40px)); margin: 0 auto; padding: 44px 0 72px; }
 .top { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
 .brand { display: flex; align-items: center; gap: 12px; color: var(--gold); }
 .brand img { width: 40px; height: 40px; border-radius: 50%; }
 .brand span { font-family: var(--mono); letter-spacing: 0.18em; font-size: 13px; }
 .lang-sw { display: flex; gap: 4px; }
 .lang-sw button {
-  min-width: 36px; min-height: 30px; border: 1px solid #3a3a40; background: transparent; color: var(--paper);
+  min-width: 44px; min-height: 44px; border: 1px solid #3a3a40; background: transparent; color: var(--paper);
   font: 12px var(--mono); letter-spacing: 0.08em; cursor: pointer;
 }
 .lang-sw button.on { border-color: var(--gold); color: var(--gold); }
@@ -38,6 +38,9 @@ ol.projects { list-style: none; margin: 0; padding: 0; }
 .project h3 a:hover { color: var(--gold); }
 .project .meta { font: 11px var(--mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--mute); margin: 6px 0 10px; }
 .project .desc { margin: 0 0 12px; color: #d4d0c8; }
+.project .still { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border: 1px solid var(--rule); margin: 0 0 14px; }
+.project .note { margin: 0 0 12px; color: var(--paper); }
+.project .note span { font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); }
 .project .acts { margin: 0; display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; font: 13px var(--mono); letter-spacing: 0.06em; }
 .project .btn { border: 1px solid var(--gold); padding: 6px 14px; }
 .project .btn:hover { background: var(--gold); color: #120c02; text-decoration: none; }
