@@ -6,6 +6,7 @@
     en: {
       tagline: "A small shelf of projects",
       intro: "Games, tools, and literary toys, made one at a time. Live now: Choppy Bitcoin, Stonk Arena, Parques en Guerra, and rayo borgesdebioyizador. Two more are on the way.",
+      skip: "Skip to projects",
       projects: "Projects",
       open: "Open",
       play: "Play",
@@ -41,6 +42,7 @@
     es: {
       tagline: "Un pequeño estante de proyectos",
       intro: "Juegos, herramientas y juguetes literarios, hechos de a uno. En línea: Choppy Bitcoin, Stonk Arena, Parques en Guerra y rayo borgesdebioyizador. Dos más vienen en camino.",
+      skip: "Ir a los proyectos",
       projects: "Proyectos",
       open: "Abrir",
       play: "Jugar",
@@ -60,11 +62,11 @@
       noscript: "La lista de proyectos necesita JavaScript. Choppy Bitcoin está en /choppy-bitcoin/, Stonk Arena en https://stonk-arena.vercel.app/ y Parques en Guerra en https://ondanueve.github.io/batalla-naval-parques/.",
       privacyH: "Política de privacidad",
       privacyB1: "Bitcoinizate es un estante de juegos, herramientas y juguetes literarios. No vendemos un token, no mostramos anuncios y no vendemos tus datos.",
-      privacyB2: "Si jugás como invitado, este dispositivo guarda tu mejor puntaje, premios de partida y ajustes como el aspecto, el sonido y el idioma. Eso queda en el almacenamiento local. No lo recibimos.",
-      privacyB2a: "Choppy Bitcoin anota conteos agregados y anónimos de partidas empezadas, terminadas y compartidas, sin datos personales, y también el puntaje de la vela del día si lo enviás.",
-      privacyB3: "Si creás una cuenta guardamos tu correo, un hash de contraseña (lo maneja Supabase), tu alias, direcciones opcionales de Bitcoin y Lightning para cobros, tu puntaje en la nube, una cinta de partida guardada, premios y tu rating de versus. El feedback que mandás con la sesión iniciada se guarda con la cuenta.",
-      privacyB4: "Eso sirve para entrar, mostrar un ranking público de alias y puntaje, pagar premios y leer el feedback. No vendemos listas. Las donaciones van a una factura Lightning o una dirección Bitcoin. El pago en sí no dice quién sos.",
-      privacyB5: "Podés cerrar sesión cuando quieras. Para borrar una cuenta, escribinos a hello@bitcoinizate.com desde el correo con el que te registraste. Borramos la cuenta y el perfil asociado.",
+      privacyB2: "Si juegas como invitado, este dispositivo guarda tu mejor puntaje, premios de partida y ajustes como el aspecto, el sonido y el idioma. Eso queda en el almacenamiento local del dispositivo. No lo recibimos.",
+      privacyB2a: "Choppy Bitcoin registra conteos agregados anónimos de partidas iniciadas, terminadas y compartidas, sin datos personales, y también los puntajes de la vela del día si el jugador los envía.",
+      privacyB3: "Si creas una cuenta guardamos tu correo, un hash de contraseña (lo maneja Supabase), tu alias, direcciones opcionales de Bitcoin y Lightning para cobros, tu puntaje en la nube, una cinta de partida guardada, premios y tu rating de versus. El feedback que envías con la sesión iniciada se guarda con tu cuenta.",
+      privacyB4: "Eso sirve para iniciar sesión, mostrar un ranking público de alias y puntaje, pagar premios y leer el feedback. No vendemos listas. Las donaciones van a nuestra factura Lightning o dirección Bitcoin. El pago en sí no nos dice quién eres.",
+      privacyB5: "Puedes cerrar sesión cuando quieras. Para borrar una cuenta escribe a hello@bitcoinizate.com desde el correo con el que te registraste. Borramos la cuenta y el perfil asociado.",
       privacyPH: "Parques en Guerra",
       privacyP1: "<a href=\"https://ondanueve.github.io/batalla-naval-parques/\">Parques en Guerra</a> no tiene servidor propio ni cuentas. No te pedimos correo, alias ni contraseña.",
       privacyP2: "El modo en línea conecta a los dos jugadores directamente, de navegador a navegador, mediante WebRTC. Usa el servidor público de <a href=\"https://peerjs.com/\">PeerJS</a> solo para emparejar y señalizar, así que ese servicio de terceros puede ver las direcciones IP de los jugadores. Las partidas no se guardan en ningún servidor.",
@@ -133,10 +135,25 @@
         if (p.more) acts.appendChild(link(p.more, t("about")));
         if (p.repo) acts.appendChild(link(p.repo, t("source")));
       }
-      if (p.image) body.appendChild(el("img", { "class": "still", src: p.image, alt: pick(p.alt) || p.name, width: "1200", height: "675" }));
-      body.appendChild(head); body.appendChild(meta); body.appendChild(desc);
-      if (note) body.appendChild(note);
-      body.appendChild(acts);
+      if (p.image) {
+        li.className += " has-still";
+        var img = el("img", { "class": "still", src: p.image, alt: pick(p.alt) || p.name, width: "1200", height: "675",
+          decoding: "async", loading: i === 0 ? "eager" : "lazy" });
+        var frame;
+        if (p.status !== "soon" && p.url) {
+          // The title link already names the project; the still is a second, mouse-only way in.
+          frame = link(p.url, null, "frame");
+          frame.setAttribute("tabindex", "-1");
+          frame.setAttribute("aria-hidden", "true");
+        } else frame = el("div", { "class": "frame" });
+        frame.appendChild(img);
+        body.appendChild(frame);
+      }
+      var text = el("div", { "class": "text" });
+      text.appendChild(head); text.appendChild(meta); text.appendChild(desc);
+      if (note) text.appendChild(note);
+      text.appendChild(acts);
+      body.appendChild(text);
       li.appendChild(num); li.appendChild(body);
       box.appendChild(li);
     });
@@ -149,7 +166,11 @@
     nodes = document.querySelectorAll("[data-i18n-html]");
     for (i = 0; i < nodes.length; i++) nodes[i].innerHTML = t(nodes[i].getAttribute("data-i18n-html"));
     nodes = document.querySelectorAll("[data-lang]");
-    for (i = 0; i < nodes.length; i++) nodes[i].classList.toggle("on", nodes[i].getAttribute("data-lang") === lang);
+    for (i = 0; i < nodes.length; i++) {
+      var on = nodes[i].getAttribute("data-lang") === lang;
+      nodes[i].classList.toggle("on", on);
+      nodes[i].setAttribute("aria-pressed", on ? "true" : "false");
+    }
     renderProjects();
   }
   function setLang(next) {

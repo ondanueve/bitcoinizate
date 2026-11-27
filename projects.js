@@ -11,7 +11,7 @@
  *   kind      short label, { en, es }
  *   desc      one or two sentences, { en, es }
  *   note      optional first-session line, { en, es }
- *   image     optional still, a site path
+ *   image     optional still, a site path (16:9 WebP, 1200x675)
  *   alt       optional still alt text, { en, es }
  * Order here is the order on the page.
  */
@@ -24,7 +24,7 @@ window.BZ_PROJECTS = [
     cta: "play",
     more: "/choppy-bitcoin/about/",
     repo: "https://github.com/ondanueve/choppy-bitcoin",
-    image: "/stills/choppy.jpg",
+    image: "/stills/choppy.webp",
     kind: { en: "Browser game", es: "Juego en el navegador" },
     alt: {
       en: "A coin crossing a Japanese candlestick chart",
@@ -45,11 +45,11 @@ window.BZ_PROJECTS = [
     status: "live",
     url: "https://stonk-arena.vercel.app",
     cta: "play",
-    image: "/stills/stonk.jpg",
+    image: "/stills/stonk.webp",
     kind: { en: "Browser card game", es: "Juego de cartas en el navegador" },
     alt: {
-      en: "Five trading cards on a dark desk",
-      es: "Cinco cartas de trading sobre un escritorio oscuro"
+      en: "Five trading cards and a lit candle on a dark desk",
+      es: "Cinco cartas de trading y una vela encendida sobre un escritorio oscuro"
     },
     desc: {
       en: "A trading-card duel in the browser. Five desks try to take a rival Portfolio to zero while the tape cycles Bull, Bear and Chop. Build a book, hold or attack, and climb a six-floor campaign.",
@@ -63,15 +63,15 @@ window.BZ_PROJECTS = [
     url: "https://ondanueve.github.io/batalla-naval-parques/",
     cta: "play",
     repo: "https://github.com/ondanueve/batalla-naval-parques",
-    image: "/stills/parques.jpg",
+    image: "/stills/parques.webp",
     kind: { en: "Browser game", es: "Juego en el navegador" },
     alt: {
-      en: "Three national parks as tiles on a board",
-      es: "Tres parques nacionales como fichas de un tablero"
+      en: "Three national parks as tiles on a board: a lake, a waterfall and a glacier",
+      es: "Tres parques nacionales como fichas de un tablero: un lago, una cascada y un glaciar"
     },
     desc: {
-      en: "A territorial battle in Argentina's national parks. Play as Argentina defending Nahuel Huapi, Iguazú and Los Glaciares, or as an invader (Chile, UK, USA, China, Russia or Brazil), against the CPU or online.",
-      es: "Batalla territorial en los parques nacionales argentinos. Defendé Nahuel Huapi, Iguazú y Los Glaciares como Argentina, o invadí como Chile, UK, EE.UU., China, Rusia o Brasil, contra la máquina o en línea."
+      en: "Battleship on real satellite maps of Argentina's national parks: Nahuel Huapi, Iguazú and Los Glaciares. On water a piece is a ship, on land a tank, never across the shore. Take on the CPU, invite a friend with a link, or join a free-for-all of up to eight.",
+      es: "Batalla naval sobre mapas satelitales reales de los parques nacionales argentinos: Nahuel Huapi, Iguazú y Los Glaciares. En el agua cada pieza es un barco, en tierra un tanque, nunca cruzando la costa. Contra la máquina, con alguien invitado por enlace o en un todos contra todos de hasta ocho."
     }
   },
   {
@@ -81,7 +81,7 @@ window.BZ_PROJECTS = [
     url: "https://ondanueve.github.io/RB/",
     cta: "open",
     repo: "https://github.com/ondanueve/RB",
-    image: "/stills/rayo.jpg",
+    image: "/stills/rayo.webp",
     kind: { en: "Literary toy", es: "Juguete literario" },
     alt: {
       en: "A page of an apocryphal diary and a pen",
