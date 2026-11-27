@@ -31,10 +31,10 @@
       privacyB3: "If you create an account we keep your email, a password hash (handled by Supabase), your alias, optional Bitcoin and Lightning payout addresses, your cloud high score, a saved run tape, awards, and your versus rating. Feedback you send while signed in is stored with your account.",
       privacyB4: "We use that to sign you in, show a public leaderboard of alias and score, pay prize winners, and read feedback. We do not sell lists. Donations go to our Lightning invoice or Bitcoin address. The payment itself does not tell us who you are.",
       privacyB5: "You can sign out anytime. To delete an account, email hello@bitcoinizate.com from the address you registered with. We delete the account and the profile tied to it.",
-      privacyPH: "Parques en Guerra",
-      privacyP1: "<a href=\"https://ondanueve.github.io/batalla-naval-parques/\">Parques en Guerra</a> has no backend of its own and no accounts. We do not ask for an email, alias, or password.",
+      privacyPH: "Parks at War",
+      privacyP1: "<a href=\"https://ondanueve.github.io/batalla-naval-parques/?lang=en\">Parks at War</a> has no backend of its own and no accounts. We do not ask for an email, alias, or password.",
       privacyP2: "Online mode connects the two players directly, browser to browser, using WebRTC. It uses the public <a href=\"https://peerjs.com/\">PeerJS</a> server only for matchmaking and signaling, so that third-party service can see the players' IP addresses. Matches are not stored on any server.",
-      privacyP3: "The game uses the device's local storage (localStorage) only to remember whether you have seen the intro and the tutorial. That stays on your device. We do not receive it.",
+      privacyP3: "The game uses the device's local storage (localStorage) only to remember your language, whether you have seen the intro and the tutorial, whether you have opened the in-game panel, whether you folded the turn panel, and the CPU level (Normal or Hard). The rules you pick are kept only for the browser session (sessionStorage). That stays on your device. We do not receive it.",
       privacySH: "Stonk Arena",
       privacyS1: "<a href=\"https://stonk-arena.vercel.app/\">Stonk Arena</a> has no accounts. Progress, decks, the campaign and settings stay in this browser's local storage. We do not receive them.",
       privacyB6: "Questions: <a href=\"mailto:hello@bitcoinizate.com\">hello@bitcoinizate.com</a>"
@@ -70,7 +70,7 @@
       privacyPH: "Parques en Guerra",
       privacyP1: "<a href=\"https://ondanueve.github.io/batalla-naval-parques/\">Parques en Guerra</a> no tiene servidor propio ni cuentas. No te pedimos correo, alias ni contraseña.",
       privacyP2: "El modo en línea conecta a los dos jugadores directamente, de navegador a navegador, mediante WebRTC. Usa el servidor público de <a href=\"https://peerjs.com/\">PeerJS</a> solo para emparejar y señalizar, así que ese servicio de terceros puede ver las direcciones IP de los jugadores. Las partidas no se guardan en ningún servidor.",
-      privacyP3: "El juego usa el almacenamiento local del dispositivo (localStorage) solo para recordar si ya viste la intro y el tutorial. Eso queda en tu dispositivo. No lo recibimos.",
+      privacyP3: "El juego usa el almacenamiento local del dispositivo (localStorage) solo para recordar el idioma elegido, si ya viste la intro y el tutorial, si ya abriste el panel de la partida, si plegaste el panel de turno y el nivel de la máquina (Normal o Difícil). Las reglas elegidas se guardan solo mientras dura la sesión del navegador (sessionStorage). Eso queda en tu dispositivo. No lo recibimos.",
       privacySH: "Stonk Arena",
       privacyS1: "<a href=\"https://stonk-arena.vercel.app/\">Stonk Arena</a> no tiene cuentas. El progreso, los mazos, la campaña y los ajustes quedan en el almacenamiento local de este navegador. No los recibimos.",
       privacyB6: "Consultas: <a href=\"mailto:hello@bitcoinizate.com\">hello@bitcoinizate.com</a>"
