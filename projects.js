@@ -2,9 +2,10 @@
  * Bitcoinizate: list of projects shown on the home page.
  * To add a project, append an object to this array. Fields:
  *   id        unique slug
- *   name      display name
+ *   name      display name: a string, or { en, es } when the title is translated
  *   status    "live" (has a public url), "code" (public repo only) or "soon" (shown without links)
  *   url       where "Open" points (site path or full URL); omit when status is "soon"
+ *   langParam optional true when the project reads ?lang=en|es; links then carry the hub language
  *   repo      public source repo URL; omit for private repos
  *   more      optional extra page (e.g. an about/how-to-play page)
  *   cta       optional label key for the main button: "play" or "open" (default)
@@ -54,9 +55,10 @@ window.BZ_PROJECTS = [
   },
   {
     id: "parques-en-guerra",
-    name: "Parques en Guerra",
+    name: { en: "Parks at War", es: "Parques en Guerra" },
     status: "live",
     url: "https://ondanueve.github.io/batalla-naval-parques/",
+    langParam: true,
     cta: "play",
     repo: "https://github.com/ondanueve/batalla-naval-parques",
     image: "/stills/parques.webp",

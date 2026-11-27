@@ -5,7 +5,7 @@
   var dict = {
     en: {
       tagline: "A small shelf of projects",
-      intro: "Games, tools, and literary toys, made one at a time. Live now: Choppy Bitcoin, Stonk Arena, Parques en Guerra, and rayo borgesdebioyizador. Two more are on the way.",
+      intro: "Games, tools, and literary toys, made one at a time. Live now: Choppy Bitcoin, Stonk Arena, Parks at War, and rayo borgesdebioyizador. Two more are on the way.",
       skip: "Skip to projects",
       projects: "Projects",
       open: "Open",
@@ -23,7 +23,7 @@
       notFoundB: "This page is not on the shelf. It may have moved.",
       backHome: "Back to Bitcoinizate",
       redirecting: "Redirecting…",
-      noscript: "The project list needs JavaScript. Choppy Bitcoin is at /choppy-bitcoin/, Stonk Arena is at https://stonk-arena.vercel.app/ and Parques en Guerra is at https://ondanueve.github.io/batalla-naval-parques/.",
+      noscript: "The project list needs JavaScript. Choppy Bitcoin is at /choppy-bitcoin/, Stonk Arena is at https://stonk-arena.vercel.app/ and Parks at War is at https://ondanueve.github.io/batalla-naval-parques/?lang=en.",
       privacyH: "Privacy policy",
       privacyB1: "Bitcoinizate is a shelf of games, tools, and literary toys. We do not sell a token, we do not run ads, and we do not sell your data.",
       privacyB2: "If you play as a guest, this device keeps your best score, awards, and settings such as look, sound, and language. That stays in local storage on the device. We do not receive it.",
@@ -113,11 +113,14 @@
     var list = window.BZ_PROJECTS || [];
     box.textContent = "";
     list.forEach(function (p, i) {
+      var name = typeof p.name === "string" ? p.name : pick(p.name);
+      // langParam: the project reads ?lang=en|es, so it opens in the hub's language.
+      var url = p.url && p.langParam ? p.url + (p.url.indexOf("?") < 0 ? "?" : "&") + "lang=" + lang : p.url;
       var li = el("li", { "class": "project status-" + p.status, id: p.id });
       var num = el("span", { "class": "num", "aria-hidden": "true" }, ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII"][i] || String(i + 1));
       var body = el("div", { "class": "body" });
       var head = el("h3");
-      if (p.status !== "soon" && p.url) head.appendChild(link(p.url, p.name)); else head.textContent = p.name;
+      if (p.status !== "soon" && url) head.appendChild(link(url, name)); else head.textContent = name;
       var meta = el("p", { "class": "meta" });
       meta.textContent = pick(p.kind) + (p.status === "soon" ? "" : " · " + t(p.status === "live" ? "statusLive" : "statusCode"));
       var desc = el("p", { "class": "desc" }, pick(p.desc));
@@ -131,18 +134,18 @@
       if (p.status === "soon") {
         acts.appendChild(el("span", { "class": "wip" }, t("statusSoon")));
       } else {
-        if (p.url && p.url !== p.repo) acts.appendChild(link(p.url, t(p.cta || "open"), "btn"));
+        if (url && p.url !== p.repo) acts.appendChild(link(url, t(p.cta || "open"), "btn"));
         if (p.more) acts.appendChild(link(p.more, t("about")));
         if (p.repo) acts.appendChild(link(p.repo, t("source")));
       }
       if (p.image) {
         li.className += " has-still";
-        var img = el("img", { "class": "still", src: p.image, alt: pick(p.alt) || p.name, width: "1200", height: "675",
+        var img = el("img", { "class": "still", src: p.image, alt: pick(p.alt) || name, width: "1200", height: "675",
           decoding: "async", loading: i === 0 ? "eager" : "lazy" });
         var frame;
-        if (p.status !== "soon" && p.url) {
+        if (p.status !== "soon" && url) {
           // The title link already names the project; the still is a second, mouse-only way in.
-          frame = link(p.url, null, "frame");
+          frame = link(url, null, "frame");
           frame.setAttribute("tabindex", "-1");
           frame.setAttribute("aria-hidden", "true");
         } else frame = el("div", { "class": "frame" });
