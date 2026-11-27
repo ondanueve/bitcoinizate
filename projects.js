@@ -25,18 +25,14 @@ window.BZ_PROJECTS = [
     more: "/choppy-bitcoin/about/",
     repo: "https://github.com/ondanueve/choppy-bitcoin",
     image: "/stills/choppy.webp",
-    kind: { en: "Browser game", es: "Juego en el navegador" },
+    kind: { en: "Browser game", es: "Browser game" },
     alt: {
       en: "A coin crossing a Japanese candlestick chart",
       es: "Una moneda cruzando un gráfico de velas japonesas"
     },
     desc: {
-      en: "A trading arcade in your browser. Fly the ₿ through Japanese candlesticks: time the market or just DCA and chill. Climb the daily Ranked — the same chart for everyone until 00:00 UTC — or set off on a story, from a family stake to the shores of Bitcoin Country. Score is play money. No token.",
-      es: "Un arcade de trading en el navegador. Volá el ₿ entre velas japonesas: timeá el mercado o hacé DCA y quedate. Subí el Ranked del día —la misma vela para todos hasta las 00:00 UTC— o salí de aventura, de una apuesta familiar a las costas de Bitcoin Country. El puntaje es plata de juego. Sin token."
-    },
-    note: {
-      en: "Tap or press space and slip between the candles. A wick liquidates you. Buy and sell show up in the run, not before.",
-      es: "Tocá o apretá espacio y pasá entre las velas. Una mecha te liquida. Comprar y vender entran en la partida, no antes."
+      en: "A trading arcade in your browser. Fly the ₿ through Japanese candlesticks: time the market or just DCA and chill. Climb the daily Ranked, or set off on story adventures, from family stakes to the shores of Bitcoin Country.",
+      es: "A trading arcade in your browser. Fly the ₿ through Japanese candlesticks: time the market or just DCA and chill. Climb the daily Ranked, or set off on story adventures, from family stakes to the shores of Bitcoin Country."
     }
   },
   {
